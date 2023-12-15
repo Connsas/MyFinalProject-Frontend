@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../../services/cart.service';
 import { CartItems } from '../../models/carItems';
 
-
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -56,7 +55,7 @@ export class ProductComponent implements OnInit {
       });
   }
 
-  addToCart(product:Product){
+  addToCart(product: Product) {
     this.cartService.addToCart(product);
   }
 }

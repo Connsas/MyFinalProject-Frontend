@@ -7,6 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { FormGroup } from '@angular/forms';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(), provideHttpClient(withFetch()), provideToastr({positionClass:"toast-bottom-right"}), provideAnimations()]
