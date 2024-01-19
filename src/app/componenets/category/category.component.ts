@@ -20,7 +20,7 @@ export class CategoryComponent implements OnInit {
   }
 
   categories: Category[] = [];
-  currentCategory: Category = {categoryId:0,categoryName:"dummy"};
+  currentCategory: Category = { categoryId: 0, categoryName: 'dummy' };
 
   getCategories() {
     this.categoryService.getCategories().subscribe((response) => {
@@ -32,8 +32,8 @@ export class CategoryComponent implements OnInit {
     this.currentCategory = category;
   }
 
-  removeCurrentCategory(){
-    this.currentCategory = {categoryId:0,categoryName:"dummy"}
+  removeCurrentCategory() {
+    this.currentCategory = { categoryId: 0, categoryName: 'dummy' };
   }
 
   getCurrentCategoryClass(category: Category) {

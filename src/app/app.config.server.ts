@@ -1,7 +1,8 @@
 import { mergeApplicationConfig, ApplicationConfig, Injectable } from '@angular/core';
 import { provideServerRendering } from '@angular/platform-server';
 import { appConfig } from './app.config';
-import { HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './interceptors/auth.interceptor';
 
 const serverConfig: ApplicationConfig = {
   providers: [
